@@ -15,23 +15,23 @@ function renderList() {
 function addTodo() {
     const Title = document.getElementById("title").value
     const Details = document.getElementById("details").value
-    if (!Title && !Details){
+    if (!Title || !Details) {
         alert("please fiil the form")
-    }
+    } else {
+        const item = {
+            title: Title,
+            details: Details
+        }
+        items.push(item)
+        saveTodos()
+        renderList()
 
-    const item = {
-        title: Title,
-        details: Details
+        document.getElementById("title").value = ""
+        document.getElementById("details").value = ""
     }
-    items.push(item)
-    saveTodos()
-    renderList()
-
-    document.getElementById("title").value = ""
-    document.getElementById("details").value = ""
 }
 
-function deleteTodo(index){
+function deleteTodo(index) {
     items.splice(index, 1)
     saveTodos()
     renderList()

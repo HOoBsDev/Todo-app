@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -22,7 +27,8 @@ label{
 submit{
     margin: 7px 0 7px 0;
     display: block;
-    width: fit-content;
+    width: auto;
+    text-align: center;
     background: #28a745;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -37,7 +43,7 @@ submit:disabled { opacity: 0.6; cursor: not-allowed; }
 button{
     margin: 7px 0 7px 0;
     display: block;
-    width: fit-content;
+    width: 100%;
     background: #a72828;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -61,7 +67,19 @@ input{
 }
 
 #list{
-    list-style:decimal;
+    list-style:none;
     height: 150px;
     overflow-y: scroll;
+    padding: 0;
+}
+
+li{
+    background: #fff;
+    line-height: .5;
+    padding: 10px;
+    border: black solid 1px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
